@@ -71,6 +71,7 @@ app.get("/signupSubmit", function (req, res) {
 
   else {
     const messe = "please fill all the forms";
+    
     res.render(__dirname + '/views/signup.ejs', { mess: " ", pass: " ", loginerror: " ", mess1: messe });
   }
 })
@@ -112,9 +113,9 @@ app.post("/loginSubmit", function (req, res) {
     .get()
     .then((docs) => {
       if (docs.size > 0) {
-        const userDoc = docs.docs[0]; // Get the first matching document
-        const userData = userDoc.data(); // Get the data of the matching document
-        const firstName = userData.Firstname; // Get the "Firstname" field from the data
+        const userDoc = docs.docs[0]; 
+        const userData = userDoc.data(); 
+        const firstName = userData.Firstname; 
         res.cookie('username', firstName);
         res.render(__dirname + '/views/index.ejs');
       } else {
