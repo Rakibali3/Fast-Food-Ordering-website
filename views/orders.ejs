@@ -437,7 +437,6 @@
 
             .main nav a {
                 font-size: 1rem;
-                /* Change font size for better readability on smaller screens */
             }
         }
 
@@ -1110,18 +1109,13 @@
                 cartSidebar.classList.add("active");
             }
 
-            // Function to close the cart sidebar
             function closeCartSidebar() {
                 cartSidebar.classList.remove("active");
             }
-
-            // Event listener for the "View cart" button
             viewCartButton.addEventListener("click", openCartSidebar);
 
-            // Event listener for the "Close" button inside the cart sidebar
             closeSidebarButton.addEventListener("click", closeCartSidebar);
 
-            // Add click event listeners to all "Add to cart" buttons
         })
 
         var list = [];
@@ -1181,9 +1175,9 @@
         function logout() {
             // Set a logout flag in a cookie
             document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            document.cookie = 'logoutFlag=true; path=/'; // You can set an expiration date if needed
+            document.cookie = 'logoutFlag=true; path=/';
             // Redirect to the home page
-            window.location.href = "/home"; // Replace "/home" with the actual home page URL
+            window.location.href = "/home"; 
         }
     </script>
 </body>
