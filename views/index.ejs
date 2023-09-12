@@ -262,10 +262,7 @@
             margin: auto;
         }
 
-        /* .fav-content{
-    display: flex;
-    flex-direction: column;
-} */
+ 
         .fav-images {
             display: flex;
             justify-content: space-evenly;
@@ -512,7 +509,6 @@
 
             .main nav a {
                 font-size: 1rem;
-                /* Change font size for better readability on smaller screens */
             }
         }
 
@@ -703,17 +699,6 @@
                 document.getElementById("user").innerHTML = username;
             }
         });
-        // function logout() {
-        //     document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-        //     document.getElementById("login").style.display = "block";
-        //     let log = parseInt(localStorage.getItem("logout")) || 0; // Parse the stored value as an integer or use 0 if it's not set.
-        //     localStorage.setItem("logout", 1);
-
-        //     // document.getElementById("user").style.display = "none";
-        //     // username="Login";
-        //     // document.getElementById("user").innerHTML = username;
-        // }
-
         function logout() {
             // Set a logout flag in a cookie
             document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
