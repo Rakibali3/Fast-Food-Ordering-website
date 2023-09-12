@@ -700,11 +700,10 @@
             }
         });
         function logout() {
-            // Set a logout flag in a cookie
             document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            document.cookie = 'logoutFlag=true; path=/'; // You can set an expiration date if needed
+            document.cookie = 'logoutFlag=true; path=/'; 
             // Redirect to the home page
-            window.location.href = "/home"; // Replace "/home" with the actual home page URL
+            window.location.href = "/home"; 
         }
 
     </script>
