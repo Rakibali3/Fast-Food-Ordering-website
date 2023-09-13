@@ -31,19 +31,7 @@ app.get('/orders', (req, res) => {
 app.get('/payment', (req, res) => {
   res.render(__dirname + '/views/payment.ejs');
 });
-app.post('/paymentverify', (req, res) => {
-  const email1=req.body.email1;
-  const cardno=req.body.cardnumber;
-  const expiry=req.body.expiry;
-  const cvv=req.body.cvv;
-  if(email1 && cardno && expiry && cvv){
-    res.render(__dirname +'/views/confirm.ejs');
-  }
-  else{
-    const details="please fill ur card details";
-    res.send("<script>alert('" +details+ "')</script>");
-  }
-});
+
 app.get('/orderconfirm', (req, res) => {
   res.render(__dirname + '/views/confirm.ejs');
 });
